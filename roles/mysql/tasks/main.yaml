@@ -1,0 +1,11 @@
+  - name: installing mysql server
+    package:
+      name: mysql-server
+      state: present
+  - name: start and enable service
+    service:
+      name: mysqld
+      state: started
+      enabled: yes
+  - name: setup root password
+    command: mysql_secure_installation --set-root-pass "{{ MYSQL_ROOT_PASSWORD }}"

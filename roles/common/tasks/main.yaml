@@ -1,0 +1,3 @@
+- name: this is common tasks
+  debug:
+    msg: " Hi this is from common task execution"

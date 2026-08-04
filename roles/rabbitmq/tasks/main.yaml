@@ -1,0 +1,23 @@
+  - name: copying the mongorepo
+    copy:
+     src: rabbitmq.repo
+     dest: /etc/yum.repos.d/rabbitmq.repo
+  - name: installing rabbitmq server
+    package:
+      name: rabbitmq-server
+      state: present
+  - name: Enabling and start service
+    service:
+      name: rabbitmq-server
+      state: started
+      enabled: yes
+  - name: create user and setup
+    community.rabbitmq.rabbitmq_user:
+      user: "{{ MQ_USER }}"
+      password: "{{ MQ_PASSWORD }}"
+      permissions:
+        - vhost: /
+          configure_priv: .*
+          read_priv: .*
+          write_priv: .*
+      state: present

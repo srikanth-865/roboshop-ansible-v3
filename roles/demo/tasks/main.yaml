@@ -1,0 +1,7 @@
+- name: This is demo folder file
+  debug:
+    msg: " Hi i am from demo role tasks"
+- name: importing file from common directory
+  import_role:
+    name: common
+    tasks_from: hello
