@@ -1,3 +1,3 @@
 #MYSQL_ROOT_PASSWORD: RoboShop@1
 #root_password: "{{ lookup('amazon.aws.aws_secret', 'roboshop/mysql_root_password', region='us-east-1') | from_json  }}" #its for ansible secret vault
-root_password: "{{ lookup('amazon.aws.aws_ssm', '/Roboshop1/{{ env }}/mysql-root-password', decrypt=False , region='us-east-1') }}" #its for terraform secret
+root_password: "{{ lookup('amazon.aws.aws_ssm', '/Roboshop1/{{ env }}/mysql-root-password', decrypt=true , region='us-east-1') }}" #its for terraform secret
