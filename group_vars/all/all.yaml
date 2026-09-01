@@ -4,6 +4,6 @@ MYSQL_HOST: mysql-{{ env }}.srikanth865.online
 RABBITMQ_HOST: rabbitmq-{{ env }}.srikanth865.online 
 CATALOGUE_HOST: catalogue.backend-alb-{{ env }}.srikanth865.online
 USER_HOST: user.backend-alb-{{ env }}.srikanth865.online
-CART_HOST: cart.backend-alb-{{ env }}srikanth865.online
+CART_HOST: cart.backend-alb-{{ env }}.srikanth865.online
 SHIPPING_HOST: shipping.backend-alb-{{ env }}.srikanth865.online
 PAYMENT_HOST: payment.backend-alb-{{ env }}.srikanth865.online
